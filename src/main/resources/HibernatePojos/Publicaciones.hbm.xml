@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-jul-2018 16:14:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernatePojos.Publicaciones" table="publicaciones" catalog="proyecto" optimistic-lock="version">
+        <id name="idPublicacion" type="java.lang.Integer">
+            <column name="id_publicacion" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="investigadores" class="HibernatePojos.Investigadores" fetch="select">
+            <column name="id_autor_contacto" />
+        </many-to-one>
+        <property name="titulo" type="string">
+            <column name="titulo" length="50" />
+        </property>
+        <property name="year" type="java.lang.Integer">
+            <column name="year" />
+        </property>
+        <property name="firstPage" type="java.lang.Integer">
+            <column name="first_page" />
+        </property>
+        <property name="lastPage" type="java.lang.Integer">
+            <column name="last_page" />
+        </property>
+        <set name="investigadoreses" table="publicaciones_autores" inverse="false" lazy="true" fetch="select">
+            <key>
+                <column name="id_publicacion" not-null="true" />
+            </key>
+            <many-to-many entity-name="HibernatePojos.Investigadores">
+                <column name="id_autor" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

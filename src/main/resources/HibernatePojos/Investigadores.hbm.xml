@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-jul-2018 16:14:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernatePojos.Investigadores" table="investigadores" catalog="proyecto" optimistic-lock="version">
+        <id name="idInvestigador" type="java.lang.Integer">
+            <column name="id_investigador" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="instituciones" class="HibernatePojos.Instituciones" fetch="select">
+            <column name="id_institucion" />
+        </many-to-one>
+        <property name="borrado" type="java.lang.Boolean">
+            <column name="borrado" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" />
+        </property>
+        <property name="apellido1" type="string">
+            <column name="apellido1" length="50" />
+        </property>
+        <property name="apellido2" type="string">
+            <column name="apellido2" length="50" />
+        </property>
+        <property name="correo" type="string">
+            <column name="correo" length="50" />
+        </property>
+        <property name="puesto" type="string">
+            <column name="puesto" length="20" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="20" />
+        </property>
+        <set name="publicacioneses" table="publicaciones" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_autor_contacto" />
+            </key>
+            <one-to-many class="HibernatePojos.Publicaciones" />
+        </set>
+        <set name="publicacioneses_1" table="publicaciones_autores" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_autor" not-null="true" />
+            </key>
+            <many-to-many entity-name="HibernatePojos.Publicaciones">
+                <column name="id_publicacion" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
