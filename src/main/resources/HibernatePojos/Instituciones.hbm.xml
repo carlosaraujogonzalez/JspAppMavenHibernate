@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-jul-2018 16:14:10 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="HibernatePojos.Instituciones" table="instituciones" catalog="proyecto" optimistic-lock="version">
+        <id name="idInstitucion" type="java.lang.Integer">
+            <column name="id_institucion" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="50" />
+        </property>
+        <property name="ciudad" type="string">
+            <column name="ciudad" length="50" />
+        </property>
+        <property name="pais" type="string">
+            <column name="pais" length="50" />
+        </property>
+        <set name="investigadoreses" table="investigadores" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_institucion" />
+            </key>
+            <one-to-many class="HibernatePojos.Investigadores" />
+        </set>
+    </class>
+</hibernate-mapping>

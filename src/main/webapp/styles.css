@@ -1,0 +1,330 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25-jun-2018, 15:48:26
+    Author     : Carlos Araújo González
+*/
+
+/* //////////////////////////// */
+/* ////////// Inicio  ///////// */
+/* //////////////////////////// */
+.inicio_imgcontainer {
+    padding: 16px;
+    background-color: darkblue;
+}
+
+.inicio_buttoncontainer {
+    padding: 16px;
+    background-color: darkblue;
+}
+
+/* //////////////////////////// */
+/* /////// Login ////////////// */
+/* //////////////////////////// */
+.login_body{
+     background-color: white;
+}
+
+.login_div_container{
+    padding: 10px;
+    margin: 5px;
+    background-color: antiquewhite;
+}
+    
+.login_div_imgcontainer {
+    text-align: center;
+    background-color: antiquewhite;
+    margin: 5px 5px 5px 5px;
+}
+
+/* Extra style for the cancel button (red) */
+.login_button_cancel {
+    width: 49%;
+    padding: 10px 18px;
+    background-color: red;
+}
+
+.login_button_ok {
+    width: 49%;
+    padding: 10px 18px;
+    background-color: green;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding: 16px;
+    margin-top: 0px;
+}
+/* //////////////////////////// */
+/* //// Datos personales  ///// */
+/* //////////////////////////// */
+.datosPersonales_container{
+    align-content: center;
+    margin: 50px 250px 50px 250px;
+    background-color: darkblue;
+    padding: 50px 16px 50px 16px;
+}
+
+.datosPersonales_imgcontainer{
+    align-content: center;
+    margin-left: 130px;
+    background-color: darkblue;
+    width: 60%;
+}
+
+.datosPersonales_buttonscontainer{
+    align-content: center;
+    margin-left: 130px;
+    background-color: darkblue;
+    width: 60%;
+}
+
+.datosPersonales_buttons{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* //////////////////////////// */
+/* ////////// Login  ////////// */
+/* ////////// Signin ////////// */
+/* //////////////////////////// */
+form {
+    border: 3px solid #f1f1f1;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* //////////////////////////////////// */
+/* ////////// Publicaciones  ////////// */
+/* //////////////////////////////////// */
+.publishesbyuser_table {
+    border: 1px solid black;
+    border-spacing: 1px;
+    background-color: antiquewhite;
+}
+
+.publishesbyuser_td{
+    width: 100px;
+    border: 1px solid black;
+    padding: 1px;
+    text-align: center;
+}
+
+.publishesbyuser_th{
+    border: 1px solid black;
+    padding: 1px;
+    text-align: center;
+    background-color: activeborder;
+}
+
+.publishes_button{  
+    background-color: #46a049;
+    color: white;
+    padding: 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 33%;
+}
+
+.publishes_h1{
+    color: antiquewhite;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 5px;
+    border: 1px solid darkblue;
+    width: 100%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* /////////////////////////////// */
+/* ////////// Resultado ////////// */
+/* /////////////////////////////// */
+.resultado_h1{
+    color: antiquewhite;
+}
+
+.resultado_h2{
+    color: antiquewhite;
+}
+
+.resultado_button_back{
+    background-color: #46a049;
+    color: white;
+    padding: 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 33%;
+}
+
+/* ////////////////////////////////// */
+/* ////////// Registro.jsp ////////// */
+/* ////////////////////////////////// */
+.registro_body{
+     background-color: white;
+}
+
+.div_formcontainer{
+    background-color: white;
+}
+
+.registro_form{
+    background-color: white;
+}
+
+/* Center the avatar image inside this container */
+.div_registro_imgcontainer {
+    text-align: center;
+    background-color: antiquewhite;
+    margin: 5px 5px 5px 5px;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 10%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 10px;
+    margin: 5px;
+    background-color: antiquewhite;
+}
+
+.delete_button{
+    background-color: #f44336;
+    color: white;
+    padding: 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 44%;
+}
+
+.accept_button{
+    background-color: #46a049;
+    color: white;
+    padding: 5px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 44%;
+}
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/* ///////////////////////////////////////////////////////////////// */
+
+.btn {
+    border: none; /* Remove borders */
+    color: white; /* Add a text color */
+    padding: 14px 28px; /* Add some padding */
+    cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    width: 50%;
+}
+
+.default {background-color: chartreuse; color: black;} /* Gray */ 
+.default:hover {background: #ddd;}
+
+.login {background-color: #4CAF50;} /* Green */
+.login:hover {background-color: #46a049;}
+
+.signin {background-color: #2196F3;} /* Blue */
+.signin:hover {background: #0b7dda;}
+
+body {
+    background-color: darkblue;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+          
